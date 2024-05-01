@@ -1,0 +1,21 @@
+name: Validate Python e2e
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "**.md"
+
+jobs:
+  check-latest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install huggingface_hub
+      - run: python upload.py
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
