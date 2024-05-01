@@ -16,6 +16,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install huggingface_hub
+      - run: python generate.py
       - run: python upload.py
     env:
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
