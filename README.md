@@ -10,7 +10,11 @@
 
 ## 怎么用呢
 
-1. 运行 `generate.py` 从原始数据集 `origin.txt` 生成 json 格式的数据集 `converted.json`
+1. 选择一种方式得到 json 格式的数据集:
+
+- 运行 `generate.py` 从原始数据集 `origin.txt` 生成 json 格式的数据集 `converted.json`
+
+- 从 <https://huggingface.co/datasets/sbchild/for-you> 下载 `converted.json`
 
 2. 下载安装 <https://github.com/hiyouga/LLaMA-Factory>
 
